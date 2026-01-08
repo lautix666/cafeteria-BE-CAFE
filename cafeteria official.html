@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE CAFETERIA - Café, Relajación y Más</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4e1d2, #e8c5a5);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(45deg, #8B4513, #D2691E);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            margin: 0;
+            z-index: 1;
+            position: relative;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            z-index: 1;
+            position: relative;
+        }
+        nav {
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            background: url('images/cafe-hero.jpg') no-repeat center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B4513;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+        }
+        .hero p {
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .testimonials {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .promotions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .promotion {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .promotion h3 {
+            color: #8B4513;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #FFD700;
+            margin: 0 10px;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .hero { height: 250px; }
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BE CAFETERIA</h1>
+        <p>Donde el café se encuentra con la elegancia</p>
+    </header>
+    
+    <nav>
+        <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+        <a href="#menu"><i class="fas fa-utensils"></i> Menú</a>
+        <a href="#testimonios"><i class="fas fa-star"></i> Testimonios</a>
+        <a href="#reservas"><i class="fas fa-calendar"></i> Reservas</a>
+        <a href="#promociones"><i class="fas fa-tags"></i> Promociones</a>
+        <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+    
+    <section id="inicio" class="hero">
+        <div>
+            <h2>¡Bienvenido a Nuestro Oasis Cafetero!</h2>
+            <p>Disfruta de sabores únicos en un ambiente sofisticado.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.4665021725305!2d-58.98069518944542!3d-27.454732515969045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450dda34e6a66f%3A0x854711685bea4cb8!2sBE%20caf%C3%A9%20y%20Focaccia!5e0!3m2!1ses!2sar!4v1767832505460!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius:10px; margin-top:20px; max-width:500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Encuéntranos en BE CAFETERIA – ¡Visítanos hoy!</p>
+        </div>
+    </section>
+    
+    <section id="menu">
+        <h2>Nuestro Menú Exclusivo</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/cafe-americano.jpg" alt="Café Americano">
+                <h3>Café Americano</h3>
+                <p>$2.50 - Negro y fuerte, perfecto para energizarte.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/capuccino.jpg" alt="Capuccino">
+                <h3>Capuccino</h3>
+                <p>$3.00 - Con espuma cremosa y canela.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/pastel-chocolate.jpg" alt="Pastel de Chocolate">
+                <h3>Pastel de Chocolate</h3>
+                <p>$4.00 - Indulgente y delicioso.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/sandwich.jpg" alt="Sándwich">
+                <h3>Sándwich Gourmet</h3>
+                <p>$5.50 - Fresco y artesanal.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonios">
+        <h2>Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"El mejor café que he probado. Ambiente increíble." - Ana G.</p>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial">
+                <p>"Perfecto para reuniones. Volveré pronto." - Carlos M.</p>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+        </div>
+    </section>
+    
+    <section id="reservas">
+        <h2>Reserva Tu Mesa</h2>
+        <p>Para reservar una mesa, contáctanos por WhatsApp:</p>
+        <a href="https://wa.me/543624500947" target="_blank" style="display: inline-block; background: #25D366; color: white; padding: 15px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
+            <i class="fab fa-whatsapp"></i> Reservar por WhatsApp: +54 3624 500947
+        </a>
+    </section>
+    
+    <section id="promociones">
+        <h2>Promociones Especiales</h2>
+        <div class="promotions">
+            <div class="promotion">
+                <h3>2x1 en Cafés</h3>
+                <p>¡Lleva dos cafés y paga uno! Válido de lunes a viernes.</p>
+            </div>
+            <div class="promotion">
+                <h3>Descuento 20% en Pasteles</h3>
+                <p>Aprovecha el 20% off en todos nuestros pasteles artesanales.</p>
+            </div>
+            <div class="promotion">
+                <h3>Combo Familiar</h3>
+                <p>Café + Pastel + Sándwich por solo $10. ¡Ideal para compartir!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Dirección: José Hernández 248, Resistencia, Chaco 3500.</p>
+        <p><i class="fas fa-phone"></i> Teléfono: +543624500947</p>
+        <p><i class="fas fa-envelope"></i> Email: info@becafeteria.com</p>
+        <p><i class="fas fa-clock"></i> Horarios: Martes a sábados 8 a 12hs y 17 a 21hs
+Domingos 17 a 21hs</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 BE CAFETERIA. Todos los derechos reservados.</p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/be.cafe.rcia/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </footer>
+
+    <script>
+        // Slider simple para la galería (eliminado ya que no hay galería)
+    </script>
+</body>
+</html>
